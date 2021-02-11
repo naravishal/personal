@@ -112,6 +112,24 @@ TODO: Past Code Snippet Here
     - Force
     - Purge ( Clear Stage Files)
     - Load History View
+        - We cam see 14 days of history of copy command of the table
+        - It will give 1000 Records at maximum
+
+- Each DB will have Information schema for Metadata
+- Query 
+
+```sql
+SELECT * FROM information_schema.load_history
+WHERE SCHEMA_NAME = 'SCOTT'
+    AND TABLE_NAME = 'EMP'
+```
+
+- Warehouse means virutal Machine
+
+- Copy Command works much better when we have split files instead of one big file. Example : 1 500 MB will lot more time than loading 10 50MB Files.
+
+
+
 
 #### Snowflake Performance :
 
@@ -198,6 +216,32 @@ Optimizer Considerations
     - Manages Object.
 
 
+#### Most Important Features of Snowflake : USP
+
+    - Snowpipe
+    - Data Sharing
+    - Time Travel
+    - Retention Period
+    - FailSafe
+    - Clone
+    - Sampling
+    - Materialized Views
+
+
+#### Sampling
+
+ We can create some percent of prod data as deve data.
+
+ Two Sampling Method
+
+ - Bernollis Method (Row)
+ - System or Block Method (Block)
+
+#### Tasks in Snowflake
+
+- Schedule queries , We can create simple trees of task to execute queries by creating dependencies
+
+- Tasks can be combined with table streams for continous ETL Workflows.
 
 #### Certification 
 
