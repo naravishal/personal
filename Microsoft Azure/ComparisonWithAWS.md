@@ -1,30 +1,5 @@
-# Microsft Azure
+# Microsoft Azure Vs AWS
 
-## Important Servies
-
-### Compute
-### Storage
-### Database
-### Big data Analytics
-### Application Monitoring
-### Security
-### Networking
-### IOT
-### Web Application
-
-
-
-
-Services with Respect to Big Data Engineering : 
-
-
-
-
-Comparison with GCP : 
-    https://docs.microsoft.com/en-us/azure/architecture/gcp-professional/services
-
-
-Comparison with AWS : 
     https://docs.microsoft.com/en-us/azure/architecture/aws-professional/services
 
 
@@ -100,4 +75,4 @@ Comparison with AWS :
 | Web Application           | CloudFront                                                   | Content Delivery Network               | A global content delivery network that delivers audio, video, applications, images, and other files.                                                                                                                                                                                                                                                                                                                                                 |
 | Web Application           | Global Accelerator                                           | Front Door                             | Easily join your distributed microservices architectures into a single global application using HTTP load balancing and path-based routing rules. Automate turning up new regions and scale-out with API-driven global actions, and independent fault-tolerance to your back end microservices in Azure-or anywhere.                                                                                                                                 |
 | Web Application           | Global Accelerator                                           | Cross-regional load balancer           | Distribute and load balance traffic across multiple Azure regions via a single, static, global anycast public IP address.                                                                                                                                                                                                                                                                                                                            |
-| Web Application           | LightSail                                                    | App Service                            | Build, deploy, and scale web apps on a fully managed platform.                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                
+| Web Application           | LightSail                                                    | App Service                            | Build, deploy, and scale web apps on a fully managed platform.                                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                                               
