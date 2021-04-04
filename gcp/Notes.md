@@ -355,19 +355,110 @@
     - setStorageClass ( 1 --> 2 --> 3 --> 4)
     - Deletion action ( delete 40 days)
 
+- Encryption : 
+    - Cloud Storage always encrypts data on the server side
+    - Configure Service storage
+        - Google Managed Encryption
+        - Customer Managed Encryption
+        - Optionally we can do client side encryption before putting into cloud. 
 
+- CLI
+    - gsutil mb bucket
+    - gsutil ls bucket://
+    - gsutil cp . . 
+    - gsutil mv . 
+    - gsutil rewrite -s STORAGE_CLASS ( Change Storage class for object)
 
 -------------------------------------------------------
 
-## <b><u> </b></u>
+## <b><u> Cloud Identity and Access Managment</b></u>
 
-- <span style="color:green"> AWS Equivalent : EC2 </span> 
+- <span style="color:green"> AWS Equivalent : IAM </span> 
+
+- Authentication : is it the right user
+- Authorization : do they have right access
+- Identities can be 
+    - GCP User ( Google account or externally authenticated users )
+    - Group of GCP Users
+    - An Application running in GCP
+    - An Application running in your data center
+    - Unauthorized users.
+- Provides very granular control 
+    - Limited to single user
+        - to perform single action.
+        - on a specific cloud resource.
+        - from a specifig ID address.
+
+- Roles : A set of permission ( to perform specific action on specific resources ) , roles do not know about members its all about permission
+
+- Policy : you assign permission to a member, you assign a role to a member
+
+- You create a role first and then bind a member to that role with policy
+
+- A role can be assigned to more than on member.
 
 -------------------------------------------------------
 
-## <b><u> </b></u>
+## <b><u> Database Fundamentals </b></u>
 
-- <span style="color:green"> AWS Equivalent : EC2 </span> 
+Choosing Right database depends upon 
+
+- Availability :
+    - Will i be able to access data now and when i need it.
+    - percentage of time an application provides the operations expected of it.
+    - Availabitlity of 99.9999 is considered good.
+
+- Durability :
+    - Will my data be available after 10 or 100 or 1000 years
+    - Durability of 99. 11(9s) is considered good. 
+
+- Consistancy :
+    - How do you ensure that data in multiple database instance is updated simoultaneosly. This is called consistancy.
+    - Types : 
+        a. Storng Consistency : Synchronous replication.
+        b. Eventual Consistency : Asynchronous replication.
+        c. Read-after-write Consistancy : 
+            - Inserts are immediate
+            - Updates are not available immediately.
+
+- RTO : Recovery Time Objective , Maximum acceptable downtime
+- RPO : Recovery point Objective, Maximum acceptable period of data loss
+
+-------------------------------------------------------
+
+## <b><u> Database Offerings from GCP </b></u>
+
+- <span style="color:green"> AWS Equivalent : RDS, Redshift & Dynamo DB </span> 
+
+- Categories of the database : 
+    - Relational Database :
+        - OLTP : 
+            Cloud SQL is managed services provided by google which supports PostgresSQL,MySQL and SQL Server for RDBMS Database ( Few TBs)
+
+            Cloud Spammer : Unlimited Scale ( Multiple PBs) and 99.9999% availability for global application with horizontal scaling. 
+        - OLAP : 
+            Big Query is recommended managed service.
+
+    - NoSQL Database : 
+        - Not only SQL
+        - Flexible Schema
+        - Horizontal Scale
+        - Strong Consistancy and SQL Features to achieve "Scalable and High performers"
+        - Google Managed Service :
+            a. Cloud Firstore 
+                - ACID Support
+                - Strong Consistancy
+                - Mobile and we client libraries
+                - Recommended for small to medium database.
+            b. Cloud BigTable
+                - Not a serverless
+                - Recommended for data size > 10 Terabyte data
+                - No Transaction load.
+    - In Memory Database.
+        - Recommended GCP Managed Service for in-memory database is memstore
+        - Its has 2 different types.
+            a. Redis 
+            b. Mem-cached.
 
 -------------------------------------------------------
 
