@@ -148,29 +148,231 @@
 
 -------------------------------------------------------
 
-## <b><u> </b></u>
-- <span style="color:green"> AWS Equivalent : EC2 </span>
+## <b><u> APP Engine </b></u>
+- <span style="color:green"> AWS Equivalent : AWS Elastice Beanstalk </span>
+
+- Simplest way to deploy and scale your application in GCP.
+- Supports 
+    - java ,python, go etc.
+    - Use custome runtime and write code in any language
+    - connect to variety of goodle cloud storage products
+    - No usage charges - Pay for resource provisioned. 
+
+- Features : 
+    - Automatic Load Balancing
+    - Platform updates
+    - Application Versioning.
+
+- App Engine Environment : 
+    - Standard : 
+        Application run in language specific sandboax
+    - Flexible : 
+        Application instance run within docker container. Supports any runtime.
+
+- App Engine - Scaling Instance : 
+    - Automatic : Automatic scale instances based on the load
+    - Basic : Instance are created as and when request are received
+        - Instances are shutdown if zero request
+        - NOT SUPPORTED by App Engine Flexible Environment
+    - Manual : Configure Specific number of instance to run.
+
+- App Engine is Regional Service (Services deployed across zones)
+- You cannot change an application region
+- Good option for simple microservices
+    - use standard v2 when you are using supported language
+    - use flexible if you are building container appse.
+- Be aware - ATLEAST one container is always flexible
+- Go for standard if you want to be able to scale down the number of instance to zero.
+- Use a combinatoin of resident and dynamic instance.
+    - Resident Instances.
+    - Dynamic Instances.
+
+-------------------------------------------------------
+
+## <b><u> Cloud Functions </b></u>
+
+- <span style="color:green"> AWS Equivalent : Lambda </span>
+
+- Execute some code when an event happens
+- Run code in response to events
+    - Write business logic in python, Node.js, Java, .NET, Ruby
+    - Dont worry about servers or scaling or availability
+- Pay only for what you use.
+    - Number of invocations
+    - Compute time.
+    - Amount of memory and cpu provision
+- Time bound : Default 1 min and max 9 minutes.
+
+-------------------------------------------------------
+
+## <b><u> Cloud KMS </b></u>
+
+- <span style="color:green"> AWS Equivalent : AWS KMS </span>
+- Createe and Manage cryptographic keys in GCP ( Symmetric and Asymmetric)
+- Control their use in your application and GCP Services
+- Provides an API to encrypt,decrypt or sign data
+- Use Existing cryptographic keys created on premises.
+- Integrate with almost all services that need to encrypt data
+- Types 
+    - Google Managed Key - No Config req.
+    - Customer Managed Key - Use Keys from KMS
+    - Customer Supplied Key - Provide own key
+
+-------------------------------------------------------
+
+## <b><u> Google Kubernetes Engine </b></u>
+
+- <span style="color:green"> AWS Equivalent : EKS </span>
+
+- Most Popular open source container Orchestration.
+- Provides cluster Management
+    - Each cluster can have different types of virtual machines
+- Provides all important container Orchestration features
+    - Auto Scaling
+    - Service Discovery
+    - Load Balancer
+    - Self Healing
+    - Zero down time deployment
+- GKE is managed kubernetes Service
+- Provides POD and Cluster Auto Scaling
+- Enable Cloud Logging and Cloud monitoring. 
+- Uses Container Optimized OS
+- Provides Support to persistant Disk and load disk
+- Cluster : Group of compute enginer instances
+    - Master Node :   
+        - api-server handles all the communication for a k8s cluster
+        - scheduler decides placment of pods
+        - control manage - Manage deployments and replica sets
+        - etcd - Distributed databases storing the cluster node.
+    - Worker Node.
+        - Runs your pods
+        - kubelet-manages communication with master node.
+
+- Cluster Types : 
+    - Zonal Cluster :
+        - Single Zone
+        - Multi zonal
+    - Regional Cluster : Replicas of the control plane runs in multiple zones of a given region. Nodes also run in same zone where control plane runs.
+    - Private Cluster : VPC-native cluster, Nodes onlyhave internal IP Address.
+    - Alpha cluster : Clusters with alpha API's early featue API's used to test new k8s features.
+
+- POTS 
+    - Smallest deployable unit in kubernetes
+    - A pod contains one or more containers
+    - Each pod is assigned an ephemeral IP address
+    - All container in a pod share
+        - Network
+        - storage
+        - IP-address
+        - port and 
+        - vollumes.
+
+- Container Registry : 
+    - You created docker images for your microservices ? Container Registry is where you store them.
+    - container Registry fully managed container registry provided by GCP ( Alternative to Docker Hub)
+
+- Cloud Run : 
+    - Container to production in seconds. 
+        - Built on top of an open standart 
+        - Fully Managed serverless platform for containerized application
+            - zero infrastructure management
+            - pay for use.
+        - Fully Integrate end to end developer experience
+            - No Limitation in languages,binaries and dependencies
+            - It integrates very well with cloud-code, cloud-build, cloud-monitoring and cloud logging integrations.
+
+- Anthos : Run Kubernetes cluster anywhere ( cloud, multi-cloud and on-premise)
+
+-------------------------------------------------------
+
+## <b><u> Google Cloud Storage </b></u>
+
+- <span style="color:green"> AWS Equivalent : EBS </span> 
+
+- Google Cloud Storage has 2 broad category
+    - Block Storage : 
+        - Persistant Disk : Network Block store, It can be Zonal and Regional.
+        - Local SSDS : Local Block Storage, Attached to VMs
+    - File Storage : 
+        - File Store : High Performance File Storage
+
+- Persistant Disk : 
+    - As anetwork drive
+    - Separate from VM instances
+    - Lower latency, I/O is slow
+    - Snapshot Supported
+    - Usecase : Perminant Storage
+    - Types :
+        - Balanced
+        - Standard
+        - SSD
+
+- Local Disk (SSDs) : 
+    - Physical Attached to VMs
+    - Life cycle : Tied with VM
+    - Improved I/O 10-100x Persistant Disk
+    - Snapshot not supported
+    - Use Case : Ephemeral Storage
+
+- Cloud FileStorage : 
+    - Shared Cloud File Storage 
+        - Supports NFSV3 Protocol
+        - Provisioned capacity
+    
+    - Suitable for high performance workloads, supports upto 320 TB with throughput of 16GB/s and 480 IOPS
+    - Supports both HDD and SSD. 
+
+-------------------------------------------------------
+
+## <b><u> Google Object Store </b></u>
+
+- <span style="color:green"> AWS Equivalent : S3 </span> 
+
+- Name should be globally unique
+- Region 
+    - Single Region
+    - Dual Region
+    - Multi Region
+- Storage Classes
+    - Standard
+    - Nearline
+    - Coldline
+    - Archieve
+- Control access can be 
+    - Fine Grained
+    - Uniform
+
+- Most Popular very flexible and in-expensive storage device
+- It is serverless : Autoscaling and infinite scale.
+- Storage large object using key-value approach. It treats entire object as unit.
+- It provides cli and REST-API and client libraries. cli is gsutil
+- can store any type of file
+- We can have versioning in google cloud storage
+- Max size of an object is 5TB. 
+- Object key is unique.
+- There is nome limit on number of buckts but its not hard limit. 
+- We can create object life cycle management
+    - setStorageClass ( 1 --> 2 --> 3 --> 4)
+    - Deletion action ( delete 40 days)
+
+
 
 -------------------------------------------------------
 
 ## <b><u> </b></u>
 
-- <span style="color:green"> AWS Equivalent : EC2 </span>
+- <span style="color:green"> AWS Equivalent : EC2 </span> 
 
 -------------------------------------------------------
 
 ## <b><u> </b></u>
 
-- <span style="color:green"> AWS Equivalent : EC2 </span>
+- <span style="color:green"> AWS Equivalent : EC2 </span> 
 
 -------------------------------------------------------
 
 ## <b><u> </b></u>
 
-- <span style="color:green"> AWS Equivalent : EC2 </span>
-
--------------------------------------------------------
-
-## <b><u> </b></u>
+- <span style="color:green"> AWS Equivalent : EC2 </span> 
 
 -------------------------------------------------------
