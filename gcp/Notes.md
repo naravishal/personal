@@ -612,11 +612,100 @@ Choosing Right database depends upon
 ## <b><u> Google Cloud VPC </b></u>
 
 - <span style="color:green"> AWS Equivalent : AWS VPC </span> 
+- It is a way to create your own private network in the cloud
+- You can control all the traffic coming in and going outside of a vpc.
+- [Best Practice] create all your GCP Resources (Compute,Storage,Database etc) within vpc
+- It will help you to secure resources from unauthorized access.
+- Enable Secure communication between your cloud resources.
+- VPC is global resource and contains subnets in one or more region.
+
+<b><u> Subnets </b></u>
+
+- Subnet is a way to separate public resources from private resources inside a vpc
+- Another reason you want to create a subnet is you want to distribute resource across multiple regions for high availability.
+- We create different subnets for public and private resources.
+    - Resource public subnets can be accessed from internet
+    - Resource in private subnet can not be access from internet
+    - Resource in public subnet can talk to resource in private subnet.
+    - Each Subnet is created in a region.
+
+<b><u> Shared VPC </b></u>
+
+- Your organiztion has multiple projects, you want resources in different projects to talk to each other, you can do it by setting up shared vpc
+- Access Needed : Shared VPC Admin
+- Shared VPC contains one host project and multiple service project.
+
+<b><u> VPC Piercing </b></u>
+
+- It is used to connect VPC network across the organization.
+- No data transfer charges for data transfer between services , As network administration is not changed
+
 
 -------------------------------------------------------
 
-## <b><u> </b></u>
+## <b><u> Cloud Monitoring </b></u>
 
-- <span style="color:green"> AWS Equivalent : EC2 </span> 
+- <span style="color:green"> AWS Equivalent : AWS Cloud Logs </span> 
+- Cloud Monitoring : 
+    - Tools to monitor your infrastructure
+    - Measure key aspects of services
+    - create visualization ( Graphs and Dashboard )
+    - Configure Alerts ( When metrics are not healthy )
+- Cloud Monitoring Workspace : 
+    - You can use cloud monitoring to monitor one or more GCP projects and one or more AWS Accounts. 
+- For VMs Cloud Monitoring will give.
+    a. CPU Utilization
+    b. Some disk traffic metric
+    c. Network traffic
+    d. Uptime information.
+- Cloud Loggin : 
+    - Realtime log management and analysis tool
+    - Allow to store, search, analyze and alert on massive vollue of data
+    - Exabye scale, Fully Managed Service
+    - Features 
+        - Log Explorer
+        - Logs Dashboard
+        - Logs Metric
+        - Logs router.
+
+
+
+-------------------------------------------------------
+
+## <b><u> Google Cloud Audit Logs </b></u>
+
+- <span style="color:green"> AWS Equivalent : Cloud Trail </span> 
+- It Answers who did what , when and where
+- It provides
+    - Admin activity logs
+    - Data Access Logs
+    - System Event logs
+    - Policy denied logs.
+
+
+-------------------------------------------------------
+
+## <b><u> Cloud DataFlow </b></u>
+
+- <span style="color:green"> AWS Equivalent : AWS Data Pipeline </span> 
+- <span style="color:blue"> Azure Equivalent : Azure Data Factory </span> 
+- Data Flow provides unified streaming and batch data processing thats serverless,fast and cost effective.
+- Its more of like EL tool in ETL. 
+- Example : 
+    - jdbc --> Storage
+    - pub/sub --> BigQuery
+    - csv --> parquet
+
+-------------------------------------------------------
+
+## <b><u> Data Proc </b></u>
+
+- <span style="color:green"> AWS Equivalent : EMR </span> 
+- It is Managed Hadoop and Spark Services
+- Multi Cluster is possible
+    - single node
+    - standard
+    - High Available cluster
+- It uses Virtual machines behind the scene just like EMR uses EC2 instance.
 
 -------------------------------------------------------
