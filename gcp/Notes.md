@@ -462,6 +462,159 @@ Choosing Right database depends upon
 
 -------------------------------------------------------
 
+## <b><u> Cloud SQL and Cloud Spammer </b></u>
+
+- <span style="color:green"> AWS Equivalent : RDS </span> 
+
+- Fully Managed Relational Database Service.
+- Supports MySQL, PostgresSQL, SQLServer
+- You can use SSDs and HDDs
+- Upto 416 GB of Memory and 30TB of Data Storage
+- Cloud spammer is very expensive, if you have huge vollume of data.
+
+- You should use cloud spanner if you want 
+    - Global database.
+    - High Availability
+    - Horizontal Scalability
+    - Huge vollume of data.
+
+- Cloud SQL Features : 
+    - Automatic Backup, maintainance and updates
+    - High Availability and failover
+    - Read Replicas for read workloads
+    - Automatic Storage increase without downtime
+    - point in time recovery - Enable binary logging.
+    - Supports Migration from other sources , you can use data migration service. 
+    - You can export data from UI Console or gcloud with formats. 
+
+- High Availability : 
+    - Create a High availability configuration 
+        - choose primary and secondar zones with regions
+        - you will have two instances Priamry and Secondary instance. 
+        - changes from primary are replicated synchronously to secondary.
+        - In case of zonal failure, automatic failover to secondary instance.
+        - High Avaialable set up cannot be used as Read Replica.
+
+<b><u>Cloud Spammer </b></u>:
+
+- Fully Managed, Mission critical relational(SQL), globally distributed database with very high availability.
+    - strong transactional consistancy at global scale.
+    - Scales to PBs of data with automatic sharding. 
+- Cloud Spammer scales horizontally for reads and writes.
+- Expensive (Compared to Cloud SQL) pay for nodes and storage.
+
+-------------------------------------------------------
+
+
+## <b><u> Cloud DataStore </b></u>
+
+- <span style="color:green"> AWS Equivalent : DynamoDB </span> 
+
+- DataStore : 
+    - Highly Scalable Document DB.
+    - Automatically scales
+    - Recommended upto few TB/s
+    - Supports Transaction
+    - Use Case : Flexible Schema
+    - Structure : king > entity
+    - You can export data only from gcloud
+
+- Firestore : 
+    - Firestore = DataStore ++ Optimized for multi device access. 
+    - Offline mode and data synchronization across multiple device.
+    - provides client side libraries - web, ios, Android.
+    - Offers DataStore and native node.
+
+-------------------------------------------------------
+
+## <b><u> Cloud Big Table </b></u>
+
+- <span style="color:green"> AWS Equivalent : ? ( Its an alternative to HBase) </span> 
+
+- Petabyte scale, wide column NoSQL DB
+- Designed for huge vollumes of analytical and operation data
+- single row transaction
+- Its not serverless ( SSDs or HDDs)
+- It can scale horizontally
+- CANNOT export data using cloud consolur or gcloud.
+- Cloud Dataflow is used to export data from BigTable to cloud Storage.
+
+
+-------------------------------------------------------
+
+
+## <b><u> Memory Store </b></u>
+
+- <span style="color:green"> AWS Equivalent : Elastic Cache </span> 
+
+- In memory data store service is in-memory data store. 
+- It reduce access time for accessing data.
+- Fully Managed Service ( Provisioning, Replication, Failover & Patching )
+- High Availability
+- It allows monitoring using cloud monitoring tools.
+- Two types :  
+    a. Redis : low latency access with persist and high availability
+    b. Memcached : used for caching data ( database query , session state etc)
+
+-------------------------------------------------------
+
+## <b><u> Big Query : Cloud Datawarehouse </b></u>
+
+- <span style="color:green"> AWS Equivalent : RedShift </span> 
+- Exabyte scale modern data warehousing sollution from GCP
+- SQL Like Query on massive database.
+- It supports
+    a. Traditional ( Storage + Compute )
+    b. Modern (Realtime + Serverless )
+- You can visiolize data using Data Studio.
+- It supports modern file formats like avro,orc and parquet.
+- Automatically expires the data.
+- Access Database Using  
+    - Cloud console
+    - BigQuery REST api
+    - bq cli
+    - HBase Api library
+- You are billed for amount of data that you are scanning. 
+- Big query can be very expensive as you are running on large datasets. 
+
+
+
+-------------------------------------------------------
+
+## <b><u> Summary of Data Services  </b></u>
+
+- Relation Database :
+    - Small local Database - Cloud SQL
+    - Highly Scalable global database - Cloud Spammer
+    - Data warehouse - Big query 
+
+- NoSQL Database :
+    - Transaction database for few TB of data - Cloud Store
+    - huge vollume of IOT and Streaming analytics - Cloud Big Table
+
+- In memory 
+    - can be Redis or memcache
+
+-------------------------------------------------------
+
+## <b><u> </b></u>
+
+- <span style="color:green"> AWS Equivalent : SNS and SQS </span> 
+- Reliable, Scalable and fully managed Asynchronous message Service
+- Backbone for highly available and highly scalable sollution
+    - Auto scale to process billions of messages per day
+    - Low cost pay for use. 
+- Use Case : Event Ingestion and delivers for streaming analytics experience.
+- Supports push and pull deliveries.
+
+-------------------------------------------------------
+
+## <b><u> Google Cloud VPC </b></u>
+
+- <span style="color:green"> AWS Equivalent : AWS VPC </span> 
+
+-------------------------------------------------------
+
 ## <b><u> </b></u>
 
 - <span style="color:green"> AWS Equivalent : EC2 </span> 
