@@ -69,3 +69,57 @@
 - What are the different system that spark can connect.
 - What are the different cluster modes in DataBricks.
 - What is Compaction in Delta Lake.
+- Different Hints available in Spark SQL
+- How Adaptive Query Enabled coverts sort merge join into Broadcast join.
+- What are the main features of AQE
+- Spark 3 Changes.
+- Explain Shallow clone and deep clone in Spark.
+- What is paired RDD
+- What is Lazy transformation, Lazy evaluation of spark.
+- Different Transformation 
+    a. Map
+    b. FlatMap
+    c. filter
+    d. mapPartitionWithIndex
+    e. mapPartition
+    f. union
+    g. simple
+    h. join
+    i. intersection
+    j. repartition
+    k. coalesce
+    l. sortBy
+    m. orderBy
+- Actions 
+    a. fold
+    b. foldLeft and foldRight
+    c. aggregateByKey
+    d. reduce
+    e. reduceByKey
+    f. combineByKey
+    g. andThen
+    h. collect
+    i. show
+
+- Explain the Use of Broadcast variable & Accumulator
+- What are the Different File formats available in Hadoop
+- Why Parquet is widely used.
+- [Different Technique in Spark for Optimization](https://spark.apache.org/docs/latest/sql-performance-tuning.html)
+    - How to Optimize skew join.
+    - Broadcast Join
+    - Number of shuffule partition
+    - AutoBroadcast join threshold
+    - Minimum number of partition
+    - Hints 
+
+# ADVANCED
+
+- Significance of Stage Skipped in Spark
+- How to pass environmental variable to spark
+- How to Cache dataset if there is a looping operation (say after every 100th processing cycle)
+- What is YARN 
+- Explain CAP Theorem and Which part of CAP theorem does HSBASE, HDFS & CASSANDRA Follows.
+- How to limit no of retries with Spark Job
+    - https://www.udemy.com/course/apache-spark-interview-question-and-answer-100-faq/
+- What is Data locality
+- What is Speculative Execution of Spark

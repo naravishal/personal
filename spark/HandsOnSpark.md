@@ -38,11 +38,49 @@
 - How to get unique numbers for column just like row_id in Oracle
 - How to set the description of spark jobs/stages to view on spark UI
 - How to check how much data is cached.
-
-
+- How to pass in Hint in Spark SQL
+- How to get list of files from which DataFrame is created.
+- How to find the size of the table in Spark.
+- How to find the size of the table in Spark sql way.
+- Word Count Program in Spark 
 
 # Transformation
+
+- Example on each 
+    - Map
+    - FlatMap
+    - filter
+    - mapPartition
+    - mapPartitionWithIndex
+    - sample
+    - union
+    - repartition
+    - coalesce
+    - groupByKey
+    - reduceBykey
+    - aggregateByKey
+    - sortBy
+    - join
+    - repartitionAndSortWithinPartitions
+    - cogroup
+    - cartesian
+
+
+
 # Actions
+
+- Example on Each one of the below
+    - reduce
+    - collect
+    - count()
+    - first()
+    - take()
+    - takeSample()
+    - saveAsTextFile
+    - countByKey
+    - foreach
+
+
 # Spark SQL
 
 - How to get column Names as comma separated String
@@ -106,9 +144,20 @@
 - How to replace nulls in DF
 - Create a test data to Create Data Frame
 - How to Create millions of rows in Spark like level in Oracle. 
-
-
-
+- Usecase for Broadcast variable and Accumulator
+- Use of andThen in Spark
+- How do you pivot the data
+- How to unpivot the data.
+- How to get difference of 2 dataset. 
+- JSON Functions 
+    - from_json() – Converts JSON string into Struct type or Map type.
+    - to_json() – Converts MapType or Struct type to JSON string.
+    - json_tuple() – Extract the Data from JSON and create them as a new columns.
+    - get_json_object() – Extracts JSON element from a JSON string based on json path specified.
+    -schema_of_json() – Create schema string from JSON string
+- fillna() & fill() in PySpark
+- Spark SQL to Find nth Highest paid Employee.
+ 
 
 # File Formats
 
@@ -117,9 +166,21 @@
 - How to read text file and create a data frame out of it.
 - How to Write Data into Parquet files into HDFS/S3 location with Partitions
 - Spark Write Options ( overwrite and append)
+- Read Data from XML File
+- Read Data from Avro File Format
+- Read Data from ORC
 
 
 # JDBC Ingestion
+
+- [Practice this Example](https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)
+- How to Import data from Oracle into Hive Partition Table
+- How to Export data from Hive to Oracle
+- How to Parallelly import data from Oracle. 
+- How to create table in Oracle if not exist before export
+- create a generic package to run for all JDBC Ingestion.
+- Session Parameter in Spark.
+
 
 # CSV and TSV 
 
@@ -157,6 +218,10 @@
 - Automatic Schema Updation in Spark.
 - Update Table based on condition.
 - Delete Table based on condition.
+- Delta Live Tables
+- How to get history of operations on Delta Table in DataBricks.
+- Automatic Schema updation Delta Lake.
+- How to convert regular tables in delta tables.
 
 
 
@@ -213,3 +278,11 @@
     - Kick of 3rd once 1st is finished
     - Kick of 4th and 5th Once 2nd is finished
     - Kick of 6th only if 3,4 and 5 are finished.
+
+- How to Run Spark Job on Kubernetes Cluster.
+
+- One Project on Spark MLlib (Movie Rating System)
+
+# Miscellaneous
+
+- Difference between df.count() and df.count
