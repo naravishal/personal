@@ -180,7 +180,7 @@
 - How to create table in Oracle if not exist before export
 - create a generic package to run for all JDBC Ingestion.
 - Session Parameter in Spark.
-
+- How to get encrypted password in Spark job
 
 # CSV and TSV 
 
