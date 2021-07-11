@@ -56,3 +56,16 @@
 - Why Repartition in Bad
 - Why Coalesce in bad in some situation.
 - How to determine the actual number of partitions before repartitions.
+- Difference between Local Temporal view and Global Temporal view.
+- Difference between Managed and External Table
+- Different Spark Write Modes Overwrite and Append.
+- Expaling Vaccum command in Delta Lake
+- Optimize in Delta Lake
+- What are the operations not possible in Streaming DataFrame
+- What is Adaptive Query Execution and Dynamic Partition Pruning in Spark.
+- Lambda Architecture of Spark
+- How many Executor can worker node hold.
+- What is different between Spark Default Partitions and Spark shuffle Partitions
+- What are the different system that spark can connect.
+- What are the different cluster modes in DataBricks.
+- What is Compaction in Delta Lake.

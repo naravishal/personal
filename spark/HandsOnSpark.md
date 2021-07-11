@@ -17,6 +17,29 @@
 - Estimate Size of DataFrame.
 - How to Check the plan of the query.
 - How to Find the Skewness in the Data
+- Parse Log file using Regex and convert into DataFrame
+- How to Save Data Frame into External Table
+- Named Parameters to Spark Job
+- How to read Image Data in Spark
+- How to Call web Api from Spark
+- Create a UDF to call REST API in Spark
+- How to Create Dropdown parameter in DataBricks notebook.
+- How to Read multiple files and folder from Spark and create a dataFrame in Spark
+- How to Read Files recursively from Folder and create df 
+- How to Optimize the conversion between PySpark and pandas Data Frame using Apache Arrow
+- How to handle column names which contains space in Spark
+- How to Write Parquet files partitioned by year,month,date
+- How to get the counts of each partitions of Input Data before doing the repartition.
+- How to Submit the Spark Job through Rest API
+- How to Write the parquet files with custom file name instead of part-
+- How to avoid _SUCCESS in writing data
+- How to Append the Date to the file name so that each day new file gets created.
+- How to run hadoop command from spark code like hadoop -rm 
+- How to get unique numbers for column just like row_id in Oracle
+- How to set the description of spark jobs/stages to view on spark UI
+- How to check how much data is cached.
+
+
 
 # Transformation
 # Actions
@@ -67,6 +90,22 @@
     - Last day of the month
     - current time stamp
     - How to find difference of date. ( Execution time of job)
+    - Months Between
+    - Add Dates to current Date
+    - Change Date Format to (dd-mm-yy, dd-mmm-yyyy)
+- How to Check if fields exists in Dataframe
+- Create new column based on condition using ( when and otherwise)
+- Case Statement in Spark SQL
+- Example on Like, RLIKE, LLIkE etc
+- Rounding of values in Spark SQL
+- How to flatten the collection. 
+- How to Explode the collection.
+- lit in Spark SQL
+- Summary() Method in PySpark
+- How to replace values in DF
+- How to replace nulls in DF
+- Create a test data to Create Data Frame
+- How to Create millions of rows in Spark like level in Oracle. 
 
 
 
@@ -76,6 +115,8 @@
 - How to Read Parquet files from HDFS
 - How to read Parquet files from s3
 - How to read text file and create a data frame out of it.
+- How to Write Data into Parquet files into HDFS/S3 location with Partitions
+- Spark Write Options ( overwrite and append)
 
 
 # JDBC Ingestion
@@ -85,7 +126,8 @@
 - How to read the csv in Spark
 - How to infer schema from headers
 - How to pass schema if its not available in headers (User Defined Schema)
-- 
+- Read Data from CSV and Write into Parquet in one go
+- Read Data from Parquet and Write it into CSV in one go
 
 
 # Json
@@ -93,6 +135,8 @@
 - How to read the Json in Spark
 - How to read nested Json in Spark
 - How to flatten the nested Json in Spark
+- Read Data from JSON and Write into Parquet in one go
+- Read Data from Parquet and Write it into JSON in one go
 
 # Delta
 
@@ -101,6 +145,19 @@
 - How to query delta lake table with Time Travel option
 - How to do upsert on Delta lake table.
 - How to display the metadata of the table.
+- Get History of Operations on Delta Table.
+- Convert Parquet into Delta Table
+- Merge Operation in Delta Lake
+- Delete Operation in Delta Lake
+- Vaccum Command in Delta Lake
+- Optimize in Delta Lake
+- Clone in Delta Lake Table
+- How to convert Delta files back to Parquet
+- Query on older snapshot of the table.
+- Automatic Schema Updation in Spark.
+- Update Table based on condition.
+- Delete Table based on condition.
+
 
 
 # Spark Streaming
@@ -116,6 +173,10 @@
 - Complete POC
     - Read Database Changes and write it into Kafka using Kafka Streams
     - Read the Kafka changes using Spark Streaming and write it into Database Tables
+- Read Streaming JSON data from HDFS/S3/BLOB storage using spark sql
+- How to check if DataFrame is streaming data frame or not.
+- How to Write Streaming Data into Snowflake
+- Window Operations on Spark Streaming
 
 
 # Performance Optimization
@@ -125,4 +186,30 @@
 - Demo on Salting Technique.
 - Sort Merge Join
 
+# Spark Connectivity with External System
 
+- Read Data from Redshift
+- Read Data from Snowflake
+- Read Data from MongoDB
+- Read Data from DynamoDB
+- Read Data from Kinesis Stream
+- Read and Write Data to Hudi
+
+
+# Bigger POC
+
+- Amazon EMR
+    - Launch a cluster with Teraform
+    - Submit the job on the cluster
+    - Terminate the cluster after finishing the job.
+
+- Step Functions :
+    - Create the EMR Cluster
+    - Submit the Spark Job
+    - Terminate the cluster after finishing the job.
+
+- Apache Airflow. 
+    - Create Sequence of Spark Jobs
+    - Kick of 3rd once 1st is finished
+    - Kick of 4th and 5th Once 2nd is finished
+    - Kick of 6th only if 3,4 and 5 are finished.
