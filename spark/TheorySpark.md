@@ -54,6 +54,7 @@
 - Explain How Sort Merge Join work
 - Difference between MEMORY_ONLY and MEMORY_AND_DISK checkpointing
 - Why Repartition in Bad
+    https://stackoverflow.com/questions/31610971/spark-repartition-vs-coalesce
 - Why Coalesce in bad in some situation.
 - How to determine the actual number of partitions before repartitions.
 - Difference between Local Temporal view and Global Temporal view.
@@ -123,3 +124,6 @@
     - https://www.udemy.com/course/apache-spark-interview-question-and-answer-100-faq/
 - What is Data locality
 - What is Speculative Execution of Spark
+
+
+https://mageswaran1989.medium.com/spark-jargon-for-starters-af1fd8117ada
