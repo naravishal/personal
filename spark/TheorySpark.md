@@ -1,4 +1,4 @@
-- What is Spark Context
+- What is Spark Contexts
 - Difference between Spark context vs Spark Sesssion
 - Explain the Architecture of Apache Spark 
 - Explain Driver and Executor Process in Spark
