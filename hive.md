@@ -84,43 +84,43 @@
 
 # Other Important Questions :
 
-- What is the default location of Hive Tables
-- Default Metastore
-- Temporary Table in Hive
-- Different types of table
-- Default Terminator in Hive 
-   - line terminator
-   - Field Terminator
-- How to Get Schema of the table
-- How to Describe Data
-- How do you convert Multiple rows into Single Object : Collect or CollectSet
-- How to Covert Array into Individual Rows 
-   - Explode
-   - Lateral view explode
-   - posexplode
-- Different types of Index : Compact and BitMap
-- Types of Partitions
-- Where NULL and empty values goes in case of partitions
-- Can we use Dynamic Partion for Load Data Command
-- Can we update and delete in Hive : 
-   - If table is transaction and file format is ORC
-   - With some limitations though
-- MSCK Command
-- Does Hive Support Truncate and Delete
-- How many reducer will be called while loading data into bucket : no_of_buckets = no_of_reducers
-- How bucketing works
-- Why Bucket join is faster
-- How to export hive data into Hive location 
-   - Insert local directory ''
-- How to execute file from Hive terminal : hive -f x.hql
-- How to execute query from terminal : hive -e "select * from emp"
-- File Formats supported by Hive
-- Hive Serde
-- What are the complex types in Hive : Array, May and Struct
-- Vectorization in Hive 
-- Advantage of Bucketing
-- Use of hive.exec.parallel=true
-- Does Hive suitable for OLTP
-- How to Check Partitions in Hive
-- Can we add partition column after creating table : No
-- How to create table structure from another table : ctas like 'tableName'
+      - What is the default location of Hive Tables
+      - Default Metastore
+      - Temporary Table in Hive
+      - Different types of table
+      - Default Terminator in Hive 
+         - line terminator
+         - Field Terminator
+      - How to Get Schema of the table
+      - How to Describe Data
+      - How do you convert Multiple rows into Single Object : Collect or CollectSet
+      - How to Covert Array into Individual Rows 
+         - Explode
+         - Lateral view explode
+         - posexplode
+      - Different types of Index : Compact and BitMap
+      - Types of Partitions
+      - Where NULL and empty values goes in case of partitions
+      - Can we use Dynamic Partion for Load Data Command
+      - Can we update and delete in Hive : 
+         - If table is transaction and file format is ORC
+         - With some limitations though
+      - MSCK Command
+      - Does Hive Support Truncate and Delete
+      - How many reducer will be called while loading data into bucket : no_of_buckets = no_of_reducers
+      - How bucketing works
+      - Why Bucket join is faster
+      - How to export hive data into Hive location 
+         - Insert local directory ''
+      - How to execute file from Hive terminal : hive -f x.hql
+      - How to execute query from terminal : hive -e "select * from emp"
+      - File Formats supported by Hive
+      - Hive Serde
+      - What are the complex types in Hive : Array, May and Struct
+      - Vectorization in Hive 
+      - Advantage of Bucketing
+      - Use of hive.exec.parallel=true
+      - Does Hive suitable for OLTP
+      - How to Check Partitions in Hive
+      - Can we add partition column after creating table : No
+      - How to create table structure from another table : ctas like 'tableName'
