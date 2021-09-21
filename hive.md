@@ -30,7 +30,7 @@
     - Right Outer Join
     - Cartesign
  - [Hive Map Join](https://data-flair.training/blogs/map-join-in-hive/)
- - [Hive Sort Merge Bucket Join]()
+ - [Hive Sort Merge Bucket Join](https://data-flair.training/blogs/hive-sort-merge-bucket-join/)
  - [Hive Bucket Map Join](https://data-flair.training/blogs/bucket-map-join/)
  - [Hive Skew Join](https://data-flair.training/blogs/hive-sort-merge-bucket-join/)
 

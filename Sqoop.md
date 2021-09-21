@@ -51,6 +51,10 @@
         Sqoop by default uses min and max , we can provide this manually.
     - When To Use Target-dir And When To Use Warehouse-dir While Importing Data :
         To specify a particular directory in HDFS use --target-dir but to specify the parent directory of all the sqoop jobs use warehouse-dir. In this case under the parent directory sqoop will cerate a directory with the same name as th e table.
+    - How to do all or nothing in Sqoop 
+        - Use -staging-table
+    - How to clear Staging Table :
+        - Use -clear-staging-table
     - How can you control the mapping between SQL data types and Java types?
         we can configure the mapping between by using the –map-column-java property.
         For example:
