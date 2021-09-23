@@ -125,9 +125,6 @@
 # Snowflake
 
 - [Link](https://github.com/naravishal/personal/blob/master/snowflake/Notes.md)
-    
-
-
 
 
 
